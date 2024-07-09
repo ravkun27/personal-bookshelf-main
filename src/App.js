@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react"; 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './Components/Navbar';
@@ -66,4 +67,24 @@ function App() {
   ); 
 } 
  
+=======
+import './App.css';
+import Cards from './Components/Cards';
+import Hero from './Components/Hero';
+import Navbar from './Components/Navbar';
+import { useEffect, useState } from 'react';
+function App() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [results, setResults] = useState('')
+
+  return (
+    <div className="App">
+      <Navbar searchTerm={searchTerm} onSearchChange={setSearchTerm} setResults={setResults} />
+      {/* <Hero/> */}
+      <Cards results={results}/>
+    </div>
+  );
+}
+
+>>>>>>> origin/master
 export default App;
