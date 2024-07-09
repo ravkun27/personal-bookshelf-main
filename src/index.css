@@ -6,4 +6,15 @@
 
 *{
     font-family: Montserrat, sans-serif ;
+<<<<<<< HEAD
+    /* color:#101214; */
 }
+
+/* @layer base {
+    body {
+      @apply bg-white dark:bg-slate-800 text-black dark:text-white;
+    }
+  } */
+=======
+}
+>>>>>>> origin/master

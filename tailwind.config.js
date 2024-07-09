@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+<<<<<<< HEAD
+    darkMode: ['selector', '[data-mode="dark"]'],
+=======
+>>>>>>> origin/master
   },
   plugins: [],
 }
