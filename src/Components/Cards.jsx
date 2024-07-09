@@ -1,28 +1,16 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import fallbackUrl from "../assets/img-404.jpg";
 import { Riple } from "react-loading-indicators";
 
 const Cards = ({ results, onSaveBook, onRemoveBook, savedBooks }) => {
-=======
-import React from "react";
-import { useEffect, useState } from "react";
-import fallbackUrl from "../assets/img-404.jpg";
-import { BookLoader } from "react-awesome-loaders";
-
-const Cards = ({results}) => {
->>>>>>> origin/master
   const [books, setBooks] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-<<<<<<< HEAD
   const isBookSaved = (bookKey) => {
     return savedBooks.some((book) => book.key === bookKey);
   };
 
-=======
->>>>>>> origin/master
   useEffect(() => {
     if (!results) return;
 
@@ -45,7 +33,6 @@ const Cards = ({results}) => {
 
     fetchBooks();
   }, [results]);
-<<<<<<< HEAD
 
   return (
     <div className="p-8">
@@ -68,36 +55,12 @@ const Cards = ({results}) => {
             An error occurred while fetching books.
           </div>
         )}
-=======
-  
-  return (
-    <div className="max-w-screen ">
-      <div className="text-center p-10">
-        <h1 className="font-bold text-4xl mb-4">Responsive Product card grid</h1>
-        <h1 className="text-3xl">Tailwind CSS</h1>
-      </div>
 
-        {isLoading && <div className="loading-screen max-w-screen h-full flex justify-center items-center"><BookLoader
-        background={"linear-gradient(135deg, #6066FA, #4645F6)"}
-        desktopSize={"100px"}
-        mobileSize={"80px"}
-        textColor={"#4645F6"}
-      /></div>}
-      <section className="w-full mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
-        
-
-        {/* {error && (
-          <div className="error-message">
-            An error occurred while fetching books.
-          </div>
-        )} */}
->>>>>>> origin/master
         {!isLoading && !error && (
           <>
             {books.map((book) => (
               <div
                 key={book.key}
-<<<<<<< HEAD
                 className="w-fit bg-white shadow-md rounded-xl duration-700 hover:scale-105 hover:shadow-xl cursor-pointer"
               >
                 {book.oclc ? (
@@ -152,9 +115,7 @@ const Cards = ({results}) => {
                     )}
                   </div>
                 </div>
-=======
                 className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
-              >
                 <a href="#">
                   {book.oclc ? (
                     <img
@@ -211,7 +172,6 @@ const Cards = ({results}) => {
                     </div>
                   </div>
                 </a>
->>>>>>> origin/master
               </div>
             ))}
           </>
